@@ -3,6 +3,7 @@ import Firebase from 'firebase';
 function ExampleCtrl($firebaseObject,$firebaseArray,AppSettings) {
   'ngInject';
 
+
   // ViewModel
   const vm = this;
 
@@ -16,6 +17,7 @@ function ExampleCtrl($firebaseObject,$firebaseArray,AppSettings) {
 
    // To iterate the key/value pairs of the object, use angular.forEach()
    angular.forEach(obj, function(value, key) {
+
       console.log(key, value);
    });
   });

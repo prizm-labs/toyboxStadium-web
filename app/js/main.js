@@ -17,7 +17,7 @@ import './directives';
 
 
 
-// create and bootstrap application
+// create and bootstrap application also these are injected modules 
 const requires = [
   'firebase',
   'ui.router',
