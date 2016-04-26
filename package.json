@@ -82,6 +82,8 @@
   "license": "MIT",
   "dependencies": {
     "angularfire": "^1.2.0",
-    "firebase": "^2.4.2"
+    "firebase": "^2.4.2",
+    "node-sass": "^3.5.3",
+    "normalize-scss": "^4.1.0"
   }
 }

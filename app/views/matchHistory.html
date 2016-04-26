@@ -17,6 +17,7 @@
   <div class="w-section scoreboard-section">
     <div class="w-container scoreboard-container">
       <div class="w-row game-stats-row">
+
         <div class="w-col w-col-6 game-stats-1">
           <div class="game-stats-div left-side-border-adjustments"><img width="6%" src="images/Right-arrow copy.png" class="dropdown-button">
             <div class="game-stats game-end-time"></div>
@@ -28,12 +29,22 @@
           </div>
         </div>
 
-
         <div class="w-col w-col-6 game-stats-2">
-          <div class="game-stats-div"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <div class="text-versus">vs</div><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+          <div class="game-stats-div">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <div class="text-versus">vs</div>
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
           </div>
         </div>
+
       </div>
 
 
@@ -51,8 +62,18 @@
 
         
         <div class="w-col w-col-6 game-stats-2">
-          <div class="game-stats-div"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team"><img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <div class="text-versus">vs</div><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team"><img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+          <div class="game-stats-div">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
+            <div class="text-versus">vs</div>
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
+            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
           </div>
         </div>
       </div>
@@ -112,3 +133,8 @@
       </div>
     </div>
   </div>
+
+
+
+
+  <div ng-repeat="list in match.data | orderBy: 'id'">{{list}}</div>
