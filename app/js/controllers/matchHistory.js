@@ -6,9 +6,6 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
   // ViewModel remember vm is the $scope that is named to render to your html
   const vm = this;
 
-
-
-
   // // obj is grabbing an object which can be used to iterate single key/value //
   // var ref = new Firebase(AppSettings.tbdatabaseUrl);
 
@@ -35,9 +32,6 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
   //   });
   // });
 
-
-
-
   // // Winner : if winner is team red else team blue //
   // // going to have to figure out how to loop through and grab all the instances //
   // var testRef = new Firebase(AppSettings.tbdatabaseUrl);
@@ -58,43 +52,26 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 
 
 
-var list = $firebaseArray(new Firebase(AppSettings.tbdatabaseUrl));
-
-vm.matchListing = list;
-
-  // Promising that your db is loaded //
-  list.$loaded().then(function(exist){
-    exist === list;
-  }).catch(function(error){
-    console.log('Error:', error);
-  });
+  var list = $firebaseArray(new Firebase(AppSettings.tbdatabaseUrl));
+  // matchListing is the whole array
+  vm.matchListing = list;
 
 
-  // function to load the winning player if string === "WIN" than load the winning teams name //
-
-  // function TestWinner($scope){
-  //   $scope.winner = '';
-  //   $scope.$watch('winner', function(){
-  //     if($scope.winner === 'WIN'){
-  //       // if it's team red push "Red"
-  //     } else {
-  //       // else push "Blue" // If possible add color using javascript
-  //       console.log('something wrong');
-  //       return false;
-  //     };
-  //   })
-  // }
-  // TestWinner(vm);
 
 
+
+
+
+
+  // // Promising that your db is loaded //
+  // list.$loaded().then(function(exist){
+  //   exist === list;
+  // }).catch(function(error){
+  //   console.log('Error:', error);
+  // });
 
 
   // Render images on columns with the corresponding teams that the player picked //
-
-
-
-
-
 
   // Render images with KDA with dummy data for now (will return for this) //
   // function that will detect if the game disconnects if yes, then remove from database //
