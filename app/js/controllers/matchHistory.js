@@ -58,11 +58,6 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 
 
 
-
-
-
-
-
   // // Promising that your db is loaded //
   // list.$loaded().then(function(exist){
   //   exist === list;

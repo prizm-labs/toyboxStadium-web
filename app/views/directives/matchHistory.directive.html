@@ -1,3 +1,31 @@
 <div class="matchHistory-directive">
-	<h2>testing out</h2>
+	<ul style="list-style-type:none">
+      <!-- you chain ng-repeats in order to access deeper into the object -->
+      <li ng-repeat='listing in match.matchListing'>
+
+        <div class="pulldown-menu">
+          <div class="w-row displayed-content-listings">
+            <div class="w-col w-col-6 team-1 displayed">
+              <!-- <h1 class="displayed-content-header kda-total">4/6/8</h1> -->
+              <ul class="w-list-unstyled list-of-creature-stats">
+                <li ng-repeat='pokemonBlue in listing.Blue.pokemon' class="w-clearfix creature-stats team01"><img src="../images/pokemonAssets/{{pokemonBlue.pokeName}}.png" width="30" height="30" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail">
+                  <div class="displayed-content-creature-name">{{pokemonBlue.pokeName}}</div>
+                  <div class="displayed-content-creature-score">{{pokemonBlue.total_kills}} / {{pokemonBlue.total_death}} / {{pokemonBlue.total_assist}}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="w-col w-col-6 team-2 displayed">
+              <!-- <h1 class="displayed-content-header kda-total">4/6/8</h1> -->
+              <ul class="w-list-unstyled list-of-creature-stats">
+                <li ng-repeat='pokemonRed in listing.Red.pokemon' class="w-clearfix creature-stats team02"><img src="../images/pokemonAssets/{{pokemonRed.pokeName}}.png" width="30" height="30" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail">
+                  <div class="displayed-content-creature-name">{{pokemonRed.pokeName}}</div>
+                  <div class="displayed-content-creature-score">{{pokemonRed.total_kills}} / {{pokemonRed.total_death}} / {{pokemonRed.total_assist}}</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
