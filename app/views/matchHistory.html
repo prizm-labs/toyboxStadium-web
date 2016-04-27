@@ -16,16 +16,16 @@
   </div>
   <div class="w-section scoreboard-section">
     <div class="w-container scoreboard-container">
-      <div class="w-row game-stats-row">
 
+      <div class="w-row game-stats-row" ng-repeat='show in match.matchListing'>
         <div class="w-col w-col-6 game-stats-1">
           <div class="game-stats-div left-side-border-adjustments"><img width="6%" src="images/Right-arrow copy.png" class="dropdown-button">
-            <div class="game-stats game-end-time"></div>
+            <div class="game-stats game-end-time">{{show.match_completion}}</div>
             <div class="game-stats game-teams">(2v2) <span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
             </div>
-            <div class="game-stats game-victor">Winner: <span class="game-text-team-red game-team-winner"></span>
+            <div class="game-stats game-victor">Winner: {{}}<span class="game-text-team-red game-team-winner"></span>
             </div>
-            <div class="game-stats game-duration"></div>
+            <div class="game-stats game-duration">{{show.match_date}}</div>
           </div>
         </div>
 
@@ -44,39 +44,19 @@
             <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
           </div>
         </div>
-
       </div>
 
+<!-- this is how you can iterate through your JSON object -->
+<!-- <p>{{match.matchListing[0].Blue.name}}</p>\
+<ul>
+  <li ng-repeat='show in match.matchListing'>{{ show }}</li>
+</ul> -->
 
-      <div class="w-row game-stats-row added-new-game-column">
-        <div class="w-col w-col-6 game-stats-1">
-          <div class="game-stats-div left-side-border-adjustments new-game"><img width="6%" src="images/Down-arrow.png" class="dropdown-button">
-            <div class="game-stats game-end-time"></div>
-            <div class="game-stats game-teams">(2v2) <span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
-            </div>
-            <div class="game-stats game-victor">Winner: <span class="game-text-team-red game-team-winner"></span>
-            </div>
-            <div class="game-stats game-duration"></div>
-          </div>
-        </div>
 
-        
-        <div class="w-col w-col-6 game-stats-2">
-          <div class="game-stats-div">
-            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <img width="35" src="images/images-1.jpg" class="team-images left-side-team">
-            <div class="text-versus">vs</div>
-            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
-            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
-            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
-            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
-            <img width="35" src="images/images-4.jpg" class="team-images right-side-team">
-          </div>
-        </div>
-      </div>
+
+
+
+      
       <div class="pulldown-menu">
         <div class="w-row displayed-content-listings">
           <div class="w-col w-col-6 team-1 displayed">
@@ -133,8 +113,3 @@
       </div>
     </div>
   </div>
-
-
-
-
-  <div ng-repeat="list in match.data">{{list}}</div>
