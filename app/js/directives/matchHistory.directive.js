@@ -4,11 +4,11 @@ function MatchHistoryDirective() {
 		restrict: 'EA',
 		templateUrl: 'directives/matchHistory.directive.html',
 		scope: {
-			message: '@clickMessage'
 		},
 		link: (scope, element) => {
 			element.on('click', () => {
-				window.alert('Test is working' + scope.message);
+				// rendering the team that's being clicked on //
+				window.alert('working on click');
 			});
 		}
 	};

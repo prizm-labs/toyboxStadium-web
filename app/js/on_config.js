@@ -24,6 +24,12 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
     controller: 'SelectedMatchCtrl as selected',
     templateUrl: 'selectedMatch.html',
     title: 'ToyBox Stadium Selected Match'
+  })
+
+  .state('test', {
+    url: '/test',
+    controller: 'MatchHistoryCtrl as match',
+    templateUrl: 'home2.html'
   });
 
   // .state('SelectedTeam', {

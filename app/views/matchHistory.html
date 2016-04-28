@@ -17,11 +17,10 @@
 <div class="w-section scoreboard-section">
   <div class="w-container scoreboard-container">
     <!-- Rendering Columns Match History -->
-    <div class="w-row game-stats-row" ng-repeat="show in match.matchListing | orderBy: -show.match_completion" ng-if='!show.match_completion == false' >
+    <div matchHistory-directive class="w-row game-stats-row" ng-repeat="show in match.matchListing | orderBy:show.match_date" ng-if='!show.match_completion == false'>
       <div class="w-col w-col-6 game-stats-1">
-        <!--  -->
         <div class="game-stats-div left-side-border-adjustments"><img width="6%" src="images/Right-arrow copy.png" class="dropdown-button">
-          <div class="game-stats game-end-time">{{show.match_date}}</div>
+          <div class="game-stats game-end-time">{{show.match_date | date:'MM/dd h:mma'}}</div>
           <div class="game-stats game-teams">2v2 <span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
           </div>
           <div class="game-stats game-victor">Winner:  
@@ -47,4 +46,6 @@
       </div>
     </div>
   </div>
+
+  
 </div>

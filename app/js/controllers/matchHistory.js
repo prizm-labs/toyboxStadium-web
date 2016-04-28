@@ -52,7 +52,7 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 
 
 
-  var list = $firebaseArray(new Firebase(AppSettings.tbdatabaseUrl));
+  var list = $firebaseArray(new Firebase(AppSettings.sessionsUrl));
   // matchListing is the whole array
   vm.matchListing = list;
 
