@@ -233,13 +233,15 @@ body {
 }
 
 .creature-stats.team02 {
-  border-left: 3px solid #000;
+  
   background-color: red;
-  font-family: Varela, sans-serif;
+  
 }
 
 .creature-stats.team01 {
   background-color: blue;
+  border-left: 3px solid #000;
+  font-family: Varela, sans-serif;
 }
 
 .prizm-labs-logo {
@@ -299,4 +301,3 @@ body {
 .rightSideColumnImages {
   display: inline-block;
 }
-
