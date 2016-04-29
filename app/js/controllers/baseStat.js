@@ -1,15 +1,19 @@
 import Firebase from 'firebase';
 
-function BaseStatsCtrl($scope,$firebaseObject,$firebaseArray,AppSettings,$route,$routeParams) {
+function BaseStatsCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 	'ngInject';
 
 	const vm = this;
 
 	var list = $firebaseArray(new Firebase(AppSettings.tbdatabaseUrl));
-
-
 	vm.baseStatsListing = list;
 
+	
+
+ 
+
+
+	// testing base stats character details //
 
 	var ref = new Firebase(AppSettings.tbdatabaseUrl);
 	var obj = $firebaseObject(ref);
@@ -30,7 +34,6 @@ function BaseStatsCtrl($scope,$firebaseObject,$firebaseArray,AppSettings,$route,
 			vm.myElement = value.myElement;
 		});
 	});
-
 
 }
 
