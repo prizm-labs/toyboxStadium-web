@@ -83,7 +83,7 @@ body {
 
 .dropdown-button {
   margin-right: 24px;
-  margin-left: 0px;
+  margin-left: 3px;
   padding-right: 0px;
   padding-bottom: 0px;
   float: none;
@@ -99,7 +99,7 @@ body {
 .game-stats {
   margin-right: 0px;
   padding-right: 0px;
-  padding-left: 29px;
+  padding-left: 0px;
 }
 
 .game-stats.game-end-time {
@@ -216,6 +216,7 @@ body {
   display: inline-block;
   margin-top: 3%;
   margin-right: 5%;
+  margin-bottom: 1%;
   float: right;
   color: #fff;
   font-size: 20px;
@@ -276,7 +277,8 @@ body {
 .game-stats-div {
   margin-right: 10px;
   padding-bottom: 0px;
-  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
 }
 
 .game-stats-div.left-side-border-adjustments {
@@ -300,4 +302,8 @@ body {
 
 .rightSideColumnImages {
   display: inline-block;
+}
+
+.list-of-creature-stats {
+  margin: 0;
 }

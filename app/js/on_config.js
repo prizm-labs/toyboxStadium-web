@@ -26,12 +26,6 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
     title: 'ToyBox Stadium Selected Match'
   })
 
-  .state('test', {
-    url: '/test',
-    controller: 'MatchHistoryCtrl as match',
-    templateUrl: 'home2.html'
-  });
-
   // .state('SelectedTeam', {
   //   url: '/selectedteam',
   //   controller: 'SelectedTeamCtrl as selectedteam',
@@ -39,6 +33,22 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
   //   title: 'ToyBox Stadium Selected Team'
   // });
   
+  .state('BaseStats', {
+    url: '/basestats',
+    controller: 'BaseStatsCtrl as base',
+    templateUrl: 'baseStats.html',
+    title: 'ToyBox Stadium Base Stats'
+  })
+
+  .state('BaseStatsDetails', {
+    url: '/basestats/:id',
+    controller: 'BaseStatsCtrl as character',
+    templateUrl: 'baseStatsDetailedStats.html',
+    title: 'ToyBox Stadium ID'
+  });
+
+
+
 
   $urlRouterProvider.otherwise('/');
 

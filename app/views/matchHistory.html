@@ -6,6 +6,7 @@
       <div class="w-icon-nav-menu"></div>
     </div>
     <h2 class="header-title">Pokémon Stadium</h2>
+    <button><a href="/">Back</a></button>
   </div>
 </div>
 <div class="header-title"></div>
@@ -20,10 +21,10 @@
 
     <!-- Rendering Columns Match History -->
     <div class="w-row game-stats-row" ng-repeat="show in match.matchListing | orderBy:show.match_date" ng-if='!show.match_completion == false'>
-      <div class="w-col w-col-12">
+      <div class="w-col w-col-12 game-stats-top-column">
         <div class="w-col w-col-6 game-stats-1">
           <div class="game-stats-div left-side-border-adjustments"><img width="6%" src="images/Right-arrow copy.png" class="dropdown-button">
-            <div class="game-stats game-end-time">{{show.match_date | date:'MM/dd h:mma'}}</div>
+            <div class="game-stats game-end-time">{{show.match_date | date:"MM/dd/yyyy"}}</div>
             <div class="game-stats game-teams">2v2 <span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
             </div>
             <div class="game-stats game-victor">Winner:  
@@ -37,7 +38,7 @@
         <div class="w-col w-col-6 game-stats-2"> 
           <div class="game-stats-div">
             <div ng-repeat='teamRed in show.Red.pokemon' class='rightSideColumnImages'>
-              <img width="30" src="../images/PokemonAssets/{{teamRed.pokeName}}.png" class="team-images left-side-team">
+              <img width="30" height="30" src="../images/PokemonAssets/{{teamRed.pokeName}}.png" class="team-images left-side-team">
             </div>
             <div class="text-versus">vs</div>
             <div ng-repeat='teamBlue in show.Blue.pokemon' class='rightSideColumnImages'>
@@ -52,9 +53,9 @@
         <div class="w-row displayed-content-listings">
 
           <div class="w-col w-col-6 team-1 displayed">
-            <h1 class="displayed-content-header kda-total">4/6/8</h1>
+
             <ul class="w-list-unstyled list-of-creature-stats">
-              <li ng-repeat='pokemonRed in show.Red.pokemon' class="w-clearfix creature-stats team02"><img src="../images/pokemonAssets/{{pokemonRed.pokeName}}.png" width="30" height="30" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail">
+              <li ng-repeat='pokemonRed in show.Red.pokemon' class="w-clearfix creature-stats team02"><img src="../images/pokemonAssets/{{pokemonRed.pokeName}}.png" width="27" height="27" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail">
                 <div class="displayed-content-creature-name">{{pokemonRed.pokeName}}</div>
                 <div class="displayed-content-creature-score">{{pokemonRed.total_kills}} / {{pokemonRed.total_death}} / {{pokemonRed.total_assist}}</div>
               </li>
@@ -62,9 +63,9 @@
           </div>
 
           <div class="w-col w-col-6 team-2 displayed">
-            <h1 class="displayed-content-header kda-total">4/6/8</h1>
+
             <ul class="w-list-unstyled list-of-creature-stats">
-              <li ng-repeat='pokemonBlue in show.Blue.pokemon' class="w-clearfix creature-stats team01"><img src="../images/pokemonAssets/{{pokemonBlue.pokeName}}.png" width="30" height="30" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail">
+              <li ng-repeat='pokemonBlue in show.Blue.pokemon' class="w-clearfix creature-stats team01"><img src="../images/pokemonAssets/{{pokemonBlue.pokeName}}.png" width="27" height="27" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail">
                 <div class="displayed-content-creature-name">{{pokemonBlue.pokeName}}</div>
                 <div class="displayed-content-creature-score">{{pokemonBlue.total_kills}} / {{pokemonBlue.total_death}} / {{pokemonBlue.total_assist}}</div>
               </li>

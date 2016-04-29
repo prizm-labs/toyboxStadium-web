@@ -7,7 +7,7 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
   const vm = this;
 
   // // obj is grabbing an object which can be used to iterate single key/value //
-  // var ref = new Firebase(AppSettings.tbdatabaseUrl);
+  // var ref = new Firebase(AppSettings.sessionsUrl);
 
   
   // var obj = $firebaseObject(ref);
@@ -56,23 +56,6 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
   // matchListing is the whole array
   vm.matchListing = list;
 
-
-
-  // // Promising that your db is loaded //
-  // list.$loaded().then(function(exist){
-  //   exist === list;
-  // }).catch(function(error){
-  //   console.log('Error:', error);
-  // });
-
-
-  // Render images on columns with the corresponding teams that the player picked //
-
-  // Render images with KDA with dummy data for now (will return for this) //
-  // function that will detect if the game disconnects if yes, then remove from database //
-  // Return to this once Danny and I figure out how to remove //
-
-  
 
 }
 
