@@ -10,6 +10,7 @@ import onConfig  from './on_config';
 import onRun     from './on_run';
 import 'angular-route';
 import 'angular-ui-router';
+import 'angular-ui-bootstrap';
 import './templates';
 import './filters';
 import './controllers';
@@ -23,6 +24,7 @@ const requires = [
 	'ngRoute',
   'firebase',
   'ui.router',
+  'ui.bootstrap',
   'templates',
   'app.filters',
   'app.controllers',

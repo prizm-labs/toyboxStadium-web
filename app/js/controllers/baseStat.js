@@ -8,32 +8,40 @@ function BaseStatsCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 	var list = $firebaseArray(new Firebase(AppSettings.tbdatabaseUrl));
 	vm.baseStatsListing = list;
 
+
 	
 
- 
 
 
-	// testing base stats character details //
 
-	var ref = new Firebase(AppSettings.tbdatabaseUrl);
-	var obj = $firebaseObject(ref);
 
-	obj.$bindTo($scope, 'data').then(function(){
-		angular.forEach(obj, function(value){
-			vm.pokeName = value.pokeName;
-			vm.MaxHP = value.MaxHP;
-			vm.speed = value.Speed;
-			vm.selectedSingleAttack = value.selectedSingleAttack;
-			vm.selectedSingleDefend = value.selectedSingleDefend;
-			vm.selectedMultiAttack = value.selectedMultiAttack;
-			vm.selectedMultiDefend = value.selectedMultiDefend;
-			vm.singleAttackDamage = value.singleAttackDamage;
-			vm.singleDefendDamage = value.singleDefendDamage;
-			vm.multipleAttackDamage = value.multipleAttackDamage;
-			vm.multipleDefendDamage = value.multipleDefendDamage;
-			vm.myElement = value.myElement;
-		});
-	});
+
+
+	// 	// Testing out routeParams. Come back to this later. //
+
+
+	// var ref = new Firebase(AppSettings.tbdatabaseUrl);
+	// var obj = $firebaseObject(ref);
+
+	// const rp = $routeParams;
+	// obj.$bindTo($scope, 'data').then(function(){
+	// 	angular.forEach(obj, function(value){
+	// 		// rp.pokeName = value.pokeName;
+	// 		// rp.MaxHP = value.MaxHP;
+	// 		// rp.speed = value.Speed;
+	// 		// rp.selectedSingleAttack = value.selectedSingleAttack;
+	// 		// rp.selectedSingleDefend = value.selectedSingleDefend;
+	// 		// rp.selectedMultiAttack = value.selectedMultiAttack;
+	// 		// rp.selectedMultiDefend = value.selectedMultiDefend;
+	// 		// rp.singleAttackDamage = value.singleAttackDamage;
+	// 		// rp.singleDefendDamage = value.singleDefendDamage;
+	// 		// rp.multipleAttackDamage = value.multipleAttackDamage;
+	// 		// rp.multipleDefendDamage = value.multipleDefendDamage;
+	// 		// rp.myElement = value.myElement;
+	// 	});
+	// });
+
+
 
 }
 

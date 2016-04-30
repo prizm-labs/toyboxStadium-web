@@ -38,15 +38,16 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
     controller: 'BaseStatsCtrl as base',
     templateUrl: 'baseStats.html',
     title: 'ToyBox Stadium Base Stats'
-  })
-
-  .state('BaseStatsDetails', {
-    url: '/basestats/:id',
-    controller: 'BaseStatsCtrl as character',
-    templateUrl: 'baseStatsDetailedStats.html',
-    title: 'ToyBox Stadium ID'
   });
 
+
+  //  // capturing the id to the specific pokemon; setting character as scope //
+  // .state('BaseStatsDetails', {
+  //   url: '/basestats/:id',
+  //   controller: 'BaseStatsCtrl as character',
+  //   templateUrl: 'baseStatsDetailedStats.html',
+  //   title: 'ToyBox Stadium ID'
+  // });
 
 
 
