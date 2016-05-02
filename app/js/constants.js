@@ -3,8 +3,8 @@ const AppSettings = {
   apiUrl: '/api/v1',
   sessionsUrl: 'https://tbssessions.firebaseio.com/',
   // registryUrl: 'https://registertbmaster.firebaseio.com/',
-  tbdatabaseUrl: 'https://testingtbdatabase.firebaseio.com/',
-  basestatsURL: 'https://basestattbmaster.firebaseio.com'
+  // tbdatabaseUrl: 'https://testingtbdatabase.firebaseio.com/',
+  basestatsUrl: 'https://basestattbmaster.firebaseio.com'
 }
 
 export default AppSettings;

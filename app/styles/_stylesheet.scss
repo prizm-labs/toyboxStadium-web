@@ -1,0 +1,122 @@
+#homeLogo {
+  width: 35px;
+  position: relative;
+  bottom: 34%;
+}
+
+h1.content-title {
+    color: white;
+    font-family: copperplate;
+    font-size: 100px;
+}
+.background-image{
+	background-size: 100% auto;
+	height:900px;
+}
+
+.content-title{
+	text-align: center;
+}
+
+.game-stats {
+	display: inline-block;
+	margin-left: 2%;
+}
+
+.game-stats-div-right {
+	text-align: center;
+}
+
+.rightSideColumnImages{
+	display: inline-block;
+}
+.text-versus{
+	display: inline-block;
+}
+
+.creature-stats {
+	list-style-type: none;
+}
+
+.team-1.displayed {
+	background-size:100%;
+}
+.team-2.displayed {
+	background-size:100%;
+}
+
+
+img.displayed-content-creature-thumbnail {
+    display: inline-block;
+}
+
+.displayed-content-creature-name.ng-binding {
+    display: inline-block;
+
+}
+
+.displayed-content-creature-score.ng-binding {
+    display: inline-block;
+
+}
+
+img.displayed-content-creature-thumbnail {
+    border: solid 1px black;
+}
+
+img.team-images.right-side-team {
+    border: 1px black solid;
+    margin-left: 5px;
+}
+
+img.team-images.left-side-team {
+    border: 1px solid black;
+    margin-right: 5px;
+}
+
+.accordionList {
+	overflow: auto;
+}
+
+.john {
+	background: white;
+}
+
+.col-md-6.team-1.displayed {
+    padding-top:.5%;
+    padding-top: 1%;
+}
+
+
+.col-md-6.team-2.displayed {
+
+    padding-top:.5%;
+    padding-top: 1%;
+}
+
+.displayed-content-creature-name.ng-binding {
+    color: white;
+    margin-left: 2.5%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.displayed-content-creature-score.ng-binding {
+    color: white;
+    float:right;
+    position:relative;
+    bottom:-3px;
+    margin-right: 5%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.game-text-team-red{
+	color:red;
+}
+.game-text-team-blue{
+	color:blue;
+}
+
+
+h2{
+	text-align: center;
+}

@@ -1,5 +1,6 @@
 import Firebase from 'firebase';
 
+
 function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
   'ngInject';
 
@@ -50,17 +51,29 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
   //   })
   // });
 
-
-
   var list = $firebaseArray(new Firebase(AppSettings.sessionsUrl));
   // matchListing is the whole array
   vm.matchListing = list;
 
 
+
+  $scope.convertSecs = function(sec) {
+    var time = sec;
+    var minutes = 0;
+    while (time > 60) {
+      time -= 60;
+      minutes ++;
+    };
+    var seconds = time;
+    var returnString = minutes + ' mins ' + parseInt(seconds) + ' secs';
+    return returnString;
+  };
+
+
+  $scope.oneAtATime = true;
+
+
 }
-
-
-
 
 export default {
   name: 'MatchHistoryCtrl',

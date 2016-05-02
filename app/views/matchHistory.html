@@ -1,88 +1,90 @@
-<div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav nav-bar">
-  <div class="w-container head-container">
-    <a href="#" class="w-nav-brand header-logo"><img width="60" src="images/prizmlogo.png" class="prizm-labs-logo">
-    </a>
-    <div class="w-nav-button">
-      <div class="w-icon-nav-menu"></div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="/"><img id='homeLogo' src="images/prizmlogo.png" alt="logo"></a>
     </div>
-    <h2 class="header-title">Pokémon Stadium</h2>
-    <button><a href="/">Back</a></button>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/matchhistory">View Match History</a></li>
+        <li><a href="/basestats">View Base Stats</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search Data">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="background-image" ng-style="{'background-image':'url(../images/red_vs_blue.png'}">
+<div class="container">
+  <div class='header-container'>
+    <h1 class='content-title'>LEADERBOARD</h1>
+  </div>
+
+
+<uib-accordion close-others="oneAtATime">
+<uib-accordion-group class="accordionList" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" ng-repeat="show in match.matchListing | orderBy:show.match_date" ng-if='!show.match_completion == false' close-others='true'>
+<uib-accordion-heading id="accordionHeader">
+<div class='col-md-12 john'>
+<div class="col-md-6">
+  <div class="game-stats-div left-side-border-adjustments"><img width="38px" src="images/right-arrow.png" class="dropdown-button">
+    <!-- <div class="game-stats game-end-time">{{show.match_date | date:"MM/dd/yyyy"}}</div> -->
+    <div class="game-stats game-teams"><span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
+    </div>
+    <div class="game-stats game-victor">Winner:  
+      <span id="winner" class="game-text game-team-winner">{{show.winner}}</span>
+    </div>
+    <div class="game-stats game-duration">{{convertSecs(show.match_duration)}}</div>
   </div>
 </div>
-<div class="header-title"></div>
-<div class="w-section header-section">
-  <div class="w-container sub-header-container">
-    <h1 class="content-title">LEADERBOARD</h1>
-  </div>
-</div>
-<div class="w-section scoreboard-section">
-  <div class="w-container scoreboard-container">
-
-
-    <!-- Rendering Columns Match History -->
-    <div class="w-row game-stats-row" ng-repeat="show in match.matchListing | orderBy:show.match_date" ng-if='!show.match_completion == false'>
-      <div class="w-col w-col-12 game-stats-top-column">
-        <div class="w-col w-col-6 game-stats-1">
-          <div class="game-stats-div left-side-border-adjustments"><img width="6%" src="images/Right-arrow copy.png" class="dropdown-button">
-            <div class="game-stats game-end-time">{{show.match_date | date:"MM/dd/yyyy"}}</div>
-            <div class="game-stats game-teams">2v2 <span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
-            </div>
-            <div class="game-stats game-victor">Winner:  
-              <span class="game-text-team-red game-team-winner">{{show.winner}}</span>
-            </div>
-            <div class="game-stats game-duration">{{show.match_duration | number:0}} secs</div>
-          </div>
-        </div>
-
-
-        <div class="w-col w-col-6 game-stats-2"> 
-          <div class="game-stats-div">
-            <div ng-repeat='teamRed in show.Red.pokemon' class='rightSideColumnImages'>
-              <img width="30" height="30" src="../images/PokemonAssets/{{teamRed.pokeName}}.png" class="team-images left-side-team">
-            </div>
-            <div class="text-versus">vs</div>
-            <div ng-repeat='teamBlue in show.Blue.pokemon' class='rightSideColumnImages'>
-              <img width="30" height="30" src="../images/PokemonAssets/{{teamBlue.pokeName}}.png" class="team-images right-side-team">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- team column drop menu -->
-      <div class="pulldown-menu">
-        <div class="w-row displayed-content-listings">
-
-          <div class="w-col w-col-6 team-1 displayed">
-
-            <ul class="w-list-unstyled list-of-creature-stats">
-              <li ng-repeat='pokemonRed in show.Red.pokemon' class="w-clearfix creature-stats team02"><img src="../images/pokemonAssets/{{pokemonRed.pokeName}}.png" width="27" height="27" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail">
-                <div class="displayed-content-creature-name">{{pokemonRed.pokeName}}</div>
-                <div class="displayed-content-creature-score">{{pokemonRed.total_kills}} / {{pokemonRed.total_death}} / {{pokemonRed.total_assist}}</div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-col w-col-6 team-2 displayed">
-
-            <ul class="w-list-unstyled list-of-creature-stats">
-              <li ng-repeat='pokemonBlue in show.Blue.pokemon' class="w-clearfix creature-stats team01"><img src="../images/pokemonAssets/{{pokemonBlue.pokeName}}.png" width="27" height="27" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail">
-                <div class="displayed-content-creature-name">{{pokemonBlue.pokeName}}</div>
-                <div class="displayed-content-creature-score">{{pokemonBlue.total_kills}} / {{pokemonBlue.total_death}} / {{pokemonBlue.total_assist}}</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
+<div class="col-md-6">
+  <div class="game-stats-div-right">
+    <div ng-repeat='teamRed in show.Red.pokemon' class='rightSideColumnImages'>
+      <img width="30" height="30" src="../images/PokemonAssets/{{teamRed.pokeName}}.png" class="team-images left-side-team">
+    </div>
+    <div class="text-versus">vs</div>
+    <div ng-repeat='teamBlue in show.Blue.pokemon' class='rightSideColumnImages'>
+      <img width="30" height="30" src="../images/PokemonAssets/{{teamBlue.pokeName}}.png" class="team-images right-side-team">
     </div>
   </div>
 </div>
+</div>
+</uib-accordion-heading>
 
 
 
+<div class="pulldown-menu">
+  <div class="col-md-12 displayed-content-listings">
+    <div class="col-md-6 team-1 displayed" ng-style="{'background-image':'url(../images/red-background-cover.png'}">
+      <ul class="w-list-unstyled list-of-creature-stats">
+        <li ng-repeat='pokemonRed in show.Red.pokemon' class="w-clearfix creature-stats team01"><img src="../images/pokemonAssets/{{pokemonRed.pokeName}}.png" width="27" height="27" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail">
+          <div class="displayed-content-creature-name">{{pokemonRed.pokeName}}</div>
+          <div class="displayed-content-creature-score">Kills : {{pokemonRed.total_kills}} / Death : {{pokemonRed.total_death}} / Assists : {{pokemonRed.total_assist}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 team-2 displayed" ng-style="{'background-image':'url(../images/blue-background-cover.png'}">
+      <ul class="w-list-unstyled list-of-creature-stats">
+        <li ng-repeat='pokemonBlue in show.Blue.pokemon' class="w-clearfix creature-stats team02"><img src="../images/pokemonAssets/{{pokemonBlue.pokeName}}.png" width="27" height="27" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail">
+          <div class="displayed-content-creature-name">{{pokemonBlue.pokeName}}</div>
+          <div class="displayed-content-creature-score">Kills : {{pokemonBlue.total_kills}} / Death : {{pokemonBlue.total_death}} / Assists : {{pokemonBlue.total_assist}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
+</uib-accordion-group>
+</div>
+</div>
+</uib-accordion>
 
+</div>
 
-
-
+</div>

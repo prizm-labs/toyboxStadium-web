@@ -1,5 +1,6 @@
 import angular from 'angular';
 
+
 //import 'firebase';
 
 import 'angularfire';
@@ -16,6 +17,7 @@ import './filters';
 import './controllers';
 import './services';
 import './directives';
+
 
 
 
