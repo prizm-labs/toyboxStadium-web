@@ -29,13 +29,13 @@
 
 
 <uib-accordion close-others="oneAtATime">
-<uib-accordion-group class="accordionList" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" ng-repeat="show in match.matchListing | orderBy:show.match_date" ng-if='!show.match_completion == false' close-others='true'>
+<uib-accordion-group class="accordionList" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" ng-repeat="show in match.matchListing | orderBy:'-match_timestamp'" ng-if='!show.match_completion == false' close-others='true'>
 <uib-accordion-heading id="accordionHeader">
 <div class='col-md-12 john'>
 <div class="col-md-6">
   <div class="game-stats-div left-side-border-adjustments"><img width="38px" src="images/right-arrow.png" class="dropdown-button">
     <!-- <div class="game-stats game-end-time">{{show.match_date | date:"MM/dd/yyyy"}}</div> -->
-    <div class="game-stats game-teams"><span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
+    <div class="game-stats game-teams"><span class="game-text-team-red">{{show.Red.name}}</span> v <span class="game-text-team-blue">{{show.Blue.name}}</span>
     </div>
 
     <!-- Check out tenary operators!!! -->
