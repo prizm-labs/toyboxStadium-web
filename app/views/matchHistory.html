@@ -48,11 +48,11 @@
 <div class="col-md-6">
   <div class="game-stats-div-right">
     <div ng-repeat='teamRed in show.Red.pokemon' class='rightSideColumnImages'>
-      <img width="30" height="30" src="../images/PokemonAssets/{{teamRed.pokeName}}.png" class="team-images left-side-team">
+      <img width="30" height="30" ng-src="../images/PokemonAssets/{{teamRed.pokeName}}.png" class="team-images left-side-team">
     </div>
     <div class="text-versus">vs</div>
     <div ng-repeat='teamBlue in show.Blue.pokemon' class='rightSideColumnImages'>
-      <img width="30" height="30" src="../images/PokemonAssets/{{teamBlue.pokeName}}.png" class="team-images right-side-team">
+      <img width="30" height="30" ng-src="../images/PokemonAssets/{{teamBlue.pokeName}}.png" class="team-images right-side-team">
     </div>
   </div>
 </div>
@@ -65,7 +65,7 @@
   <div class="col-md-12 displayed-content-listings">
     <div class="col-md-6 team-1 displayed" ng-style="{'background-image':'url(../images/red-background-cover.png'}">
       <ul class="w-list-unstyled list-of-creature-stats">
-        <li ng-repeat='pokemonRed in show.Red.pokemon' class="w-clearfix creature-stats team01"><img src="../images/pokemonAssets/{{pokemonRed.pokeName}}.png" width="27" height="27" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail">
+        <li ng-repeat='pokemonRed in show.Red.pokemon' class="w-clearfix creature-stats team01"><img ng-src="../images/PokemonAssets/{{ pokemonRed.pokeName }}.png" width="27" height="27" alt='{{pokemonRed.pokeName}}' class="displayed-content-creature-thumbnail" />
           <div class="displayed-content-creature-name">{{pokemonRed.pokeName}}</div>
           <div class="displayed-content-creature-score">Kills : {{pokemonRed.total_kills}} / Death : {{pokemonRed.total_death}} / Assists : {{pokemonRed.total_assist}}</div>
         </li>
@@ -73,7 +73,7 @@
     </div>
     <div class="col-md-6 team-2 displayed" ng-style="{'background-image':'url(../images/blue-background-cover.png'}">
       <ul class="w-list-unstyled list-of-creature-stats">
-        <li ng-repeat='pokemonBlue in show.Blue.pokemon' class="w-clearfix creature-stats team02"><img src="../images/pokemonAssets/{{pokemonBlue.pokeName}}.png" width="27" height="27" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail">
+        <li ng-repeat='pokemonBlue in show.Blue.pokemon' class="w-clearfix creature-stats team02"><img ng-src="../images/PokemonAssets/{{ pokemonBlue.pokeName }}.png" width="27" height="27" alt='{{pokemonBlue.pokeName}}' class="displayed-content-creature-thumbnail" />
           <div class="displayed-content-creature-name">{{pokemonBlue.pokeName}}</div>
           <div class="displayed-content-creature-score">Kills : {{pokemonBlue.total_kills}} / Death : {{pokemonBlue.total_death}} / Assists : {{pokemonBlue.total_assist}}</div>
         </li>

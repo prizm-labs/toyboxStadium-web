@@ -5,26 +5,26 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
 
   $stateProvider
 
-  .state('Home', {
-    url: '/',
-    controller: 'MatchHistoryCtrl as home',
-    templateUrl: 'homePage.html',
-    title: 'ToyBox Stadium Home Page',
-  })
-
   .state('MatchHistory', {
-    url: '/matchhistory',
+    url: '/',
     controller: 'MatchHistoryCtrl as match',
     templateUrl: 'matchHistory.html',
-    title: 'ToyBox Stadium MatchHistory'
+    title: 'ToyBox Stadium MatchHistory Page',
   })
 
-  .state('SelectedMatch', {
-    url: '/selectedmatch',
-    controller: 'SelectedMatchCtrl as selected',
-    templateUrl: 'selectedMatch.html',
-    title: 'ToyBox Stadium Selected Match'
-  })
+  // .state('MatchHistory', {
+  //   url: '/matchhistory',
+  //   controller: 'MatchHistoryCtrl as match',
+  //   templateUrl: 'matchHistory.html',
+  //   title: 'ToyBox Stadium MatchHistory'
+  // })
+
+  // .state('SelectedMatch', {
+  //   url: '/selectedmatch',
+  //   controller: 'SelectedMatchCtrl as selected',
+  //   templateUrl: 'selectedMatch.html',
+  //   title: 'ToyBox Stadium Selected Match'
+  // })
 
   // .state('SelectedTeam', {
   //   url: '/selectedteam',

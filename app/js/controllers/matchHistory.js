@@ -89,7 +89,6 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 
   $scope.oneAtATime = true;
 
-
 }
 
 export default {

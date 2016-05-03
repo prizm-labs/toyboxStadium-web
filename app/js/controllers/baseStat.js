@@ -7,7 +7,7 @@ function BaseStatsCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
 
 	var list = $firebaseArray(new Firebase(AppSettings.basestatsUrl));
 	vm.baseStatsListing = list;
-	console.log(list);
+	// console.log(list);
 
 	$scope.OneAtATime = true;
 
