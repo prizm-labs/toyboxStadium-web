@@ -69,6 +69,23 @@ function MatchHistoryCtrl($scope,$firebaseObject,$firebaseArray,AppSettings) {
     return returnString;
   };
 
+  $scope.convertColor1 = function(winner) {
+    if (typeof(winner) == 'string') {
+      if (winner.indexOf('Blue') > -1) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  $scope.convertColor2 = function(winner) {
+    if (typeof(winner) == 'string') {
+      if (winner.indexOf('Red') > -1) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   $scope.oneAtATime = true;
 

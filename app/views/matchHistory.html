@@ -37,8 +37,8 @@
     <!-- <div class="game-stats game-end-time">{{show.match_date | date:"MM/dd/yyyy"}}</div> -->
     <div class="game-stats game-teams"><span class="game-text-team-red">Red</span> v <span class="game-text-team-blue">Blue</span>
     </div>
-    <div class="game-stats game-victor">Winner:  
-      <span id="winner" class="game-text game-team-winner">{{show.winner}}</span>
+    <div class="game-stats game-victor"><b>Winner</b>:  
+      <span id="winner" class="game-text game-team-winner" ng-class='{bacon : convertColor1(show.winner), sausage : convertColor2(show.winner)}'><b>{{show.winner}}</b></span>
     </div>
     <div class="game-stats game-duration">{{convertSecs(show.match_duration)}}</div>
   </div>
