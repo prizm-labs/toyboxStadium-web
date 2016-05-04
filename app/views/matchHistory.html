@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-      <a class="navbar-brand" href="/"><img id='homeLogo' src="images/prizmlogo.png" alt="logo"></a>
+      <a class="navbar-brand" href="/"><img id='homeLogo' ng-src="images/prizmlogo.png" alt="logo"></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -21,7 +21,7 @@
   </div>
 </nav>
 
-<div class="background-image" ng-style="{'background-image':'url(../images/red_vs_blue.png'}">
+<div class="background-image" ng-style="{'background-image':'url(../images/red_vs_blue.png)'}">
 <div class="container">
   <div class='header-container'>
     <h1 class='content-title'>LEADERBOARD</h1>
@@ -33,7 +33,7 @@
 <uib-accordion-heading id="accordionHeader">
 <div class='col-md-12 john'>
 <div class="col-md-6">
-  <div class="game-stats-div left-side-border-adjustments"><img width="38px" src="images/right-arrow.png" class="dropdown-button">
+  <div class="game-stats-div left-side-border-adjustments"><img width="38px" ng-src="images/right-arrow.png" class="dropdown-button">
     <!-- <div class="game-stats game-end-time">{{show.match_date | date:"MM/dd/yyyy"}}</div> -->
     <div class="game-stats game-teams"><span class="game-text-team-red">{{show.Red.name}}</span> v <span class="game-text-team-blue">{{show.Blue.name}}</span>
     </div>
