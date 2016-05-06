@@ -1,0 +1,86 @@
+$breakpoint-tablet: 992px;
+$breakpoint-desktop: 993px;
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+///// Breakpoint for desktop /////
+@media (min-width: $breakpoint-desktop) {
+
+.background-image {
+		background-position: 100% 100%;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-image: url('../images/red_vs_blue.png') !important;
+		height: 1000px;
+	}
+}
+///// Breakpoint-Desktop-End!!! /////
+
+
+///// Breakpoint for tablet(landscape) /////
+@media (max-device-width: $breakpoint-tablet)
+and #{$retina}
+and (orientation:landscape)
+{
+
+	body {
+		padding: 0px;
+	}
+
+	.container {
+		width: 100%;
+		padding: 1%;
+	}
+
+	.baseStatsContainer {
+		width: 35%;
+	}
+
+	.baseStatsBackground {
+		background-image: url('../images/pokemon-starters.png') !important;
+		background-size: contain;
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 550px;
+
+	}
+
+	.panel-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 16px;
+		color: inherit;
+		text-align: center;
+	}
+
+	.baseStatsDetails {
+		padding-left: 6%;
+	}
+
+	.avatar {
+		height: 25px;
+		float: left;
+	}
+
+	.collapseOpenAll {
+		float: right;
+		margin-right:10px;
+		margin-top:10px;
+	}
+}
+///// Breakpoint-Tablet(landscape)-End!!! /////
+
+
+///// Breakpoint for tablet(portrait) /////
+@media (max-device-height: $breakpoint-tablet)
+and #{$retina}
+and (orientation:portrait) {
+	
+	.baseStatsContainer {
+		width: 50%;
+	}
+
+
+}
+////// Breakpoint-Tablet(portrait)-End!!! //////

@@ -1,3 +1,5 @@
+//////// matchHistory.html ///////
+
 #homeLogo {
   width: 35px;
   position: relative;
@@ -13,10 +15,10 @@ h1.content-title {
 
 .background-image{
     background-position: 100% 100%;
-	background-size: 100% auto;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
-	height:900px;
+    height: 1000px;
 }
 
 .content-title{
@@ -129,11 +131,6 @@ ul.w-list-unstyled.list-of-creature-stats {
     background-color: rgba(1,1,1,0.7);
 }
 
-h2{
-	text-align: center;
-    font-family: copperplate;
-}
-
 .bacon {
     color: blue;
 }
@@ -144,4 +141,15 @@ h2{
 
 .dropdown-button {
     width: 38px;
+}
+
+//////  backstats.html ////////
+
+h2{
+    text-align: center;
+    font-family: copperplate;
+}
+
+.avatar {
+    height: 25px;
 }
